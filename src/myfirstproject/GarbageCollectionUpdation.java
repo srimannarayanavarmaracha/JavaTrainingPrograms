@@ -43,15 +43,26 @@ public class GarbageCollectionUpdation implements AutoCloseable {
         } 
 
         System.out.println("\n=== 2. Nullifying reference ===");
+        
         GarbageCollectionUpdation obj1 = new GarbageCollectionUpdation("obj1");
         obj1 = null;
 
         System.out.println("\n=== 3. Reassigning reference ===");
+        
         GarbageCollectionUpdation obj2 = new GarbageCollectionUpdation("obj2");
+
+        obj2.close();
+
         obj2 = new GarbageCollectionUpdation("obj2 reassigned");
 
+        obj2.close(); 
+        
         System.out.println("\n=== 4. Anonymous object ===");
-        new GarbageCollectionUpdation("Anonymous object");
+        
+        try (GarbageCollectionUpdation obj =
+                new GarbageCollectionUpdation("Anonymous object")) {
+
+       }
 
         System.out.println("\n--- Suggesting Garbage Collection ---");
         System.gc();

@@ -12,9 +12,10 @@ public class EmployeeSalary {
 		
 		double pf = 0.12 * BasicSalary;
 		
-		int da = 100;
+		int da_perDay = 100;
+		int no_ofdays = 30; 
 		
-		int DailyAllowance = 30 * da;
+		int DailyAllowance = no_ofdays * da_perDay;
 		
 		double NetSalary =  BasicSalary + (double)DailyAllowance - pf;
 		
@@ -22,6 +23,8 @@ public class EmployeeSalary {
 		System.out.println("Provident Fund (PF) : " + pf);
 		System.out.println("Daily Allowance : " + DailyAllowance);
 		System.out.println("Net Salary of Employee : " + NetSalary);
+		
+		scanner.close();
 	}
 
 }
