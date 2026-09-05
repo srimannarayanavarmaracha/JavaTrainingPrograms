@@ -1,4 +1,4 @@
-package myfirstproject;
+package com.srimannarayana.javapractice.myfirstjavaprograms;
 
 // Parent class
 class Person {

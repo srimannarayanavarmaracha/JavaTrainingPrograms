@@ -1,4 +1,4 @@
-package myfirstproject;
+package com.srimannarayana.javapractice.myfirstjavaprograms;
 // Author class representing the reference object
 class Author {
     String authorName;
